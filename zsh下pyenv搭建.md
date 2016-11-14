@@ -12,9 +12,9 @@ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
 ```
 
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PYENVROOT="$HOME/.pyenv"' >> ~/.zshrc
 
-echo 'export PATH="PYENVROOT/bin:PYENVROOT/bin:PATH"' >> ~/.zshrc
+echo 'export PATH="$PYENVROOT/bin:$PATH"' >> ~/.zshrc
 
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
