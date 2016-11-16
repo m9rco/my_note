@@ -33,6 +33,7 @@
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
 (elpy-enable)
+(setq elpy-rpc-backend "jedi")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -92,6 +93,33 @@ key: fh 这是快捷键，在文件里输入fh后按tab键就会展开这个片�
 从#-- 以下输入代码片段就好了
 
 Filename:`(file-name-nondirectory buffer-file-name)` 这个有意思了，这个是显示当前buffer的名字的，让emacs帮你自动写。
+
+
+## elpy技巧
+
+使用elpy之前先安装好环境
+```
+# Either of these
+pip install rope
+pip install jedi
+# flake8 for code checks
+pip install flake8
+# importmagic for automatic imports
+pip install importmagic
+# and autopep8 for automatic PEP8 formatting
+pip install autopep8
+# and yapf for code formatting
+pip install yapf
+```
+下面是一些常用命令
+```
+M-x elpy-config # 查看配置情况
+# 激活／关闭虚拟环境
+M-x pyvenv-activate
+M-x pyvenv-deactivate
+M-x elpy-autopep8-fix-code # 自动用pep8修复代码格式
+```
+更多命令查看文档https://elpy.readthedocs.io/en/latest/index.html
 
 
 
