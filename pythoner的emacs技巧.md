@@ -32,7 +32,12 @@
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
+;; python
 (elpy-enable)
+;; pyenv
+(global-set-key (kbd "C-x p") 'pyvenv-activate)
+;; autofix by pep8
+(global-set-key (kbd "C-x M-f") 'elpy-autopep8-fix-code)
 (setq elpy-rpc-backend "jedi")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -41,7 +46,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (js2-mode 2048-game material-theme elpy better-defaults))))
+    (magit js2-mode 2048-game material-theme elpy better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -50,6 +55,9 @@
  )
 ;; enable pair paren
 (electric-pair-mode 1)
+
+;; git
+(global-set-key (kbd "C-x g") 'magit-status)
 ;; init.el ends here
 ```
 
