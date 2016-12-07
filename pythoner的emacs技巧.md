@@ -18,7 +18,7 @@
 (defvar myPackages
   '(better-defaults
     elpy
-    material-theme))
+    ))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
@@ -28,16 +28,17 @@
 
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
-
+;; env
+(exec-path-from-shell-initialize)
+;;
 (setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'material t) ;; load material theme
+
 (global-linum-mode t) ;; enable line numbers globally
 ;; python
 (elpy-enable)
 ;; pyenv
 (global-set-key (kbd "C-x p") 'pyvenv-activate)
-;; autofix by pep8
-(global-set-key (kbd "C-x M-f") 'elpy-autopep8-fix-code)
+
 (setq elpy-rpc-backend "jedi")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -46,7 +47,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit js2-mode 2048-game material-theme elpy better-defaults))))
+    (exec-path-from-shell magit-gitflow elixir-mode magit js2-mode elpy better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,7 +59,17 @@
 
 ;; git
 (global-set-key (kbd "C-x g") 'magit-status)
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 ;; init.el ends here
+;; psql
+(setq sql-postgres-program "/usr/local/bin/psql")
+
+;; font
+(set-default-font "Monaco-12")
+(set-fontset-font "fontset-default"  
+                  'gb18030' ("微软雅黑" . "unicode-bmp"))
+
 ```
 
 ## 使用自定义模版
