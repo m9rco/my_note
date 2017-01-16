@@ -42,6 +42,7 @@ source ~/.zshrc
 v=3.5.2|wget http://mirrors.sohu.com/python/$v/Python-$v.tar.xz -P ~/.pyenv/cache/;pyenv install $v
 
 ```
+或者下载tar包放置在.pyenv/cache目录下， 然后执行pyenv install即可安装
 
 
 

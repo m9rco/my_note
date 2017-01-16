@@ -17,5 +17,5 @@ pip install flask  -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.
 ## update所有包
 
 ```
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 ```
