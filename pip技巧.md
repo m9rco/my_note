@@ -21,5 +21,5 @@ index-url = http://mirrors.aliyun.com/pypi/simple
 ## update所有包
 
 ```
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
 ```
