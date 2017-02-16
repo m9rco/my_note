@@ -1,11 +1,16 @@
 * emacs下org-mode的技巧
 ** 代码语法高亮
+   #+BEGIN_SRC 
    (setq org-src-fontify-natively t)
+   #+END_SRC
+   
 
 ** 主题
-   安装tangotango-theme
-   然后在init.elz中添加
-   (load-theme 'tangotango t)
+#+BEGIN_EXAMPLE
+安装tangotango-theme
+然后在init.elz中添加
+(load-theme 'tangotango t)
+#+END_EXAMPLE   
 
 ** 快捷代码块
 #+BEGIN_EXAMPLE
