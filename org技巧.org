@@ -8,8 +8,11 @@
    (load-theme 'tangotango t)
 
 ** 快捷代码块
-   输入 <s 再按TAB键 ，就会自动展开为 #+BEGIN_SRC ... #+END_SRC 
-   输入 <e 再按TAB键，就会自动展开为 #+BEGIN_EXAMPLE ... #+END_EXAMPLE .
+#+BEGIN_EXAMPLE
+输入 <s 再按TAB键 ，就会自动展开为 #+BEGIN_SRC ... #+END_SRC
+输入 <e 再按TAB键，就会自动展开为 #+BEGIN_EXAMPLE ... #+END_EXAMPLE .
+#+END_EXAMPLE
+   
 
 ** 转html中防止下划线转义
    #+BEGIN_SRC 
