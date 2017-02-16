@@ -1,0 +1,22 @@
+* emacs下org-mode的技巧
+** 代码语法高亮
+   (setq org-src-fontify-natively t)
+
+** 主题
+   安装tangotango-theme
+   然后在init.elz中添加
+   (load-theme 'tangotango t)
+
+** 快捷代码块
+   输入 <s 再按TAB键 ，就会自动展开为 #+BEGIN_SRC ... #+END_SRC 
+   输入 <e 再按TAB键，就会自动展开为 #+BEGIN_EXAMPLE ... #+END_EXAMPLE .
+
+** 转html中防止下划线转义
+   #+BEGIN_SRC 
+   #+OPTIONS: ^:nil
+   #+END_SRC
+
+** 加入css文件
+   #+BEGIN_SRC 
+   #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+   #+END_SRC
