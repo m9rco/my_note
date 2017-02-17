@@ -1,0 +1,36 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+*  常用Linux操作
+** 按ID删除文件
+#+BEGIN_SRC 
+find . -inum 398445 -exec rm {} -rf \;
+#+END_SRC
+
+** 查找
+#+BEGIN_SRC 
+sudo find / -name dump.rdb
+#+END_SRC
+
+** 查找删除
+#+BEGIN_SRC 
+find ./ -name .svn |xargs rm -rf
+#+END_SRC
+
+** zsh
+#+BEGIN_SRC 
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+chsh -s /usr/bin/zsh
+#+END_SRC
+
+** 查询并杀掉进程
+#+BEGIN_SRC 
+ps auxww | grep 'celery worker' | awk '{print $2}' | xargs kill -9
+#+END_SRC
+
+
+** grep指定目录下的指定后缀文件
+#+BEGIN_SRC 
+grep -Rni --include="*.xml"  "delivery_info" openerp/
+#+END_SRC
+

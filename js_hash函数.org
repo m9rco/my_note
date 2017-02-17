@@ -1,5 +1,7 @@
-```
-
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+* 哈希函数
+#+BEGIN_SRC 
 var hashMap = {  
 
     Set : function(key,value){this[key] = value},  
@@ -10,14 +12,11 @@ var hashMap = {
 
     Remove : function(key){delete this[key]}  
 
-}  
+}
+#+END_SRC
+  
 
-```
-
-
-
-```
-
+#+BEGIN_EXAMPLE
 hashMap.Set("name","John Smith");  
 
 hashMap.Set("age",24);  
@@ -29,5 +28,4 @@ hashMap.Contains("title");//false
 hashMap.Contains("name");//true  
 
 hashMap.Remove("age"); 
-
-```
+#+END_EXAMPLE
