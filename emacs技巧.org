@@ -1,5 +1,4 @@
 * elpy技巧
-** 环境
 #+BEGIN_SRC 
 # Either of these
 pip install rope
@@ -15,4 +14,11 @@ pip install yapf
 #+END_SRC
 
 
-
+* snippet技巧
+#+BEGIN_EXAMPLE
+M-x yas-new-snippet
+#+END_EXAMPLE
+编辑完之后
+#+BEGIN_EXAMPLE
+C-c C-c
+#+END_EXAMPLE

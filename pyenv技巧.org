@@ -8,12 +8,22 @@ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-vi
 
 
 ** 环境变量
+*** zsh下
 #+BEGIN_SRC 
 echo 'export PYENVROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo 'export PATH="$PYENVROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 #+END_SRC
+
+*** bash下
+#+BEGIN_SRC 
+echo 'export PYENVROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENVROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+#+END_SRC
+
 
 ** 利用国内源加速安装python版本
 #+BEGIN_SRC 
