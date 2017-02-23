@@ -1,0 +1,48 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+* 图片压缩算法
+#+BEGIN_SRC
+from PIL import Image
+
+def _resize_img(**args):
+    args_key = {'ori_img': '', 'dst_img', 'dst_w': '',
+                'dst_h': '', 'save_q': 90}
+    arg = {}
+    for key in args_key:
+        if key in args:
+            arg[key] = args[key]
+
+    print(arg)
+    im = Image.open(arg['ori_img'])
+    ori_w, ori_h = im.size
+    widthRatio = heightRatio = None
+    ratio = 1
+    if (ori_w and ori_w > arg['dst_w']) or \
+       (ori_h and ori_h > arg['dst_h']):
+        if arg['dst_w'] and ori_w > arg['dst_w']:
+            widthRatio = float(arg['dst_w']) / ori_w  # 正确获取小数的方式
+        if arg['dst_h'] and ori_h > arg['dst_h']:
+            heightRatio = float(arg['dst_h']) / ori_h
+
+        if widthRatio and heightRatio:
+            if widthRatio < heightRatio:
+                ratio = widthRatio
+            else:
+                ratio = heightRatio
+
+        if widthRatio and not heightRatio:
+            ratio = widthRatio
+        if heightRatio and not widthRatio:
+            ratio = heightRatio
+
+        newWidth = int(ori_w * ratio)
+        newHeight = int(ori_h * ratio)
+    else:
+        newWidth = ori_w
+        newHeight = ori_h
+
+    im.resize((newWidth, newHeight), Image.ANTIALIAS).save(
+        arg['dst_img'], format=im.format, quality=arg['save_q'])
+
+#+END_SRC
