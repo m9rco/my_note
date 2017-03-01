@@ -42,3 +42,10 @@ pyenv virtualenv 2.7.10 env2710
 #+BEGIN_SRC 
 pyenv activate env2710
 #+END_SRC
+
+** 在shell脚本中使用pyenv
+   #+BEGIN_EXAMPLE
+   eval "$(pyenv init -)"
+   eval "$(pyenv virtualenv-init -)"
+   pyenv activate someenv
+   #+END_EXAMPLE
