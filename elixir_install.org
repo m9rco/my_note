@@ -1,0 +1,11 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+* install elixir in Linux
+  #+BEGIN_SRC 
+git clone https://github.com/elixir-lang/elixir.git
+cd elixir/
+git checkout v1.4
+make clean test
+sudo make install
+  #+END_SRC
