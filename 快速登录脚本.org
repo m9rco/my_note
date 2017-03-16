@@ -3,7 +3,7 @@
 
 * 快速登录脚本
   #+BEGIN_EXAMPLE
-#! /bin/bash
+  #! /bin/bash
 
 ssh_server(){
     arg="$*"
@@ -36,6 +36,8 @@ echo '               |___/'
 arg="$*"
 
 case $arg in
+    'test')
+        ssh_server root 47.88.35.64;;
     'odoo')
         ssh_server root 114.215.255.10;;
     'odoo_test')
@@ -58,8 +60,9 @@ case $arg in
         su_ssh_by_private_key /Users/tt67wq/Scripts/.epi_aws.pem ubuntu 35.167.168.62;;
     'image_server')
         su_ssh_by_private_key /Users/tt67wq/Scripts/.epi_aws.pem ubuntu 35.161.99.204;;
+    'order_center')
+        su_ssh_by_private_key /Users/tt67wq/Scripts/.epi_aws.pem ubuntu 52.26.153.109;;
     '*')
         echo 'Please Input the right app name'
 esac
-
   #+END_EXAMPLE
