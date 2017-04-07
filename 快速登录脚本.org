@@ -3,7 +3,7 @@
 
 * 快速登录脚本
   #+BEGIN_EXAMPLE
-  #! /bin/bash
+#! /bin/bash
 
 ssh_server(){
     arg="$*"
