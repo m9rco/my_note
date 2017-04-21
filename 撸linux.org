@@ -13,6 +13,7 @@ sudo find / -name dump.rdb
 
 ** 查找删除
 #+BEGIN_SRC 
+ 
 find ./ -name .svn |xargs rm -rf
 #+END_SRC
 
