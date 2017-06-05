@@ -67,3 +67,14 @@ netstat -lnp|awk 'BEGIN{prt=":1521$"}{if ($4 ~ prt) print $0}'
    lon=116.41
    #+END_EXAMPLE
 
+** logrotate例子
+   #+BEGIN_SRC 
+   /var/log/something.log {
+       su root root
+       copytruncate
+       daily
+       dateext
+       compress
+       rotate 7
+   }
+   #+END_SRC
