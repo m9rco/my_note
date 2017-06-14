@@ -9,7 +9,6 @@
 
 * install erlang
   #+BEGIN_SRC 
-  yum groupinstall "Development Tools"
   wget "http://erlang.org/download/otp_src_19.3.tar.gz" -O otp19.tar.gz
   tar xfz otp19.tar.gz
   cd otp_src_19.3/
