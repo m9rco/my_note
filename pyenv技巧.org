@@ -1,3 +1,7 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+
 * pyenv技巧
 ** 安装pyenv和虚拟环境插件
 #+BEGIN_SRC 

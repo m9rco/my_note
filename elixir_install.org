@@ -9,10 +9,10 @@
 
 * install erlang
   #+BEGIN_SRC 
-  wget "https://github.com/erlang/otp/archive/OTP-19.3.3.tar.gz" -O otp19.tar.gz
+  wget "http://erlang.org/download/otp_src_19.3.tar.gz" -O otp19.tar.gz
   tar xfz otp19.tar.gz
   cd otp_src_19.3/
-  ./configure
+  ./configure --with-ssl
   make && make install  
   #+END_SRC
 
