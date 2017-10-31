@@ -1,0 +1,6 @@
+* Mysql小技巧
+
+** 查询超时的语句并生成kill脚本
+   #+BEGIN_SRC 
+   select concat('KILL ',id,';') from information_schema.processlist where time>1000;
+   #+END_SRC
