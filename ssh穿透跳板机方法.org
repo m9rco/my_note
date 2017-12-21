@@ -1,0 +1,17 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+* 添加配置进入~/.ssh/config
+  #+BEGIN_SRC 
+  Host tiaoban
+       HostName 192.168.xxx.xxx
+       Port 22
+       User work
+
+  Host node1
+       HostName 106.14.xxx.xxx
+       Port 22
+       User root
+       ProxyCommand ssh work@tiaoban -W %h:%p
+
+  #+END_SRC
