@@ -41,6 +41,11 @@ grep -Rni --include="*.xml"  "delivery_info" openerp/
 netstat -lnp|awk 'BEGIN{prt=":1521$"}{if ($4 ~ prt) print $0}'
 #+END_SRC
 
+** 检查本机开放了哪些端口
+#+BEGIN_SRC 
+nmap -sTU localhost
+#+END_SRC
+
 ** redshift配置
    #+BEGIN_SRC 
    sudo apt-get install redshift   
