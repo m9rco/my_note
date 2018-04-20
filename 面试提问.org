@@ -1,0 +1,27 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+* 算法
+** 二分查找
+** 快排及其复杂度分析
+** 合并排及其复杂度
+** 哈希碰撞解决办法
+
+* 操作系统(主要linux)
+** 进程通信方法
+** 协程了解
+
+* 架构
+** 微服务的服务发现
+** 缓存淘汰策略
+** 锁服务设计
+
+* 数据库
+** mysql索引结构
+** mysql分库分表 冷热分离
+** redis常用数据结构
+** redis持久化 aof bgsave
+
+* 语言
+** go的gc
+

@@ -83,3 +83,8 @@ nmap -sTU localhost
        rotate 7
    }
    #+END_SRC
+
+** git神技
+#+BEGIN_SRC 
+git config --global alias.yolo '!git add -A && git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+#+END_SRC
