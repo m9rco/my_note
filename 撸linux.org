@@ -88,3 +88,10 @@ nmap -sTU localhost
 #+BEGIN_SRC 
 git config --global alias.yolo '!git add -A && git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 #+END_SRC
+
+** 防火墙检测和开启
+#+BEGIN_SRC 
+firewall-cmd --query-port=80/tcp --zone=public  #查询80端口是否开启
+firewall-cmd --zone=public --add-port=80/tcp --permanent #添加80端口
+firewall-cmd --zone=public --add-port=3306/tcp --permanent  #添加3306端口
+#+END_SRC
