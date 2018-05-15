@@ -95,3 +95,8 @@ firewall-cmd --query-port=80/tcp --zone=public  #查询80端口是否开启
 firewall-cmd --zone=public --add-port=80/tcp --permanent #添加80端口
 firewall-cmd --zone=public --add-port=3306/tcp --permanent  #添加3306端口
 #+END_SRC
+
+** redis 匹配删除key
+#+BEGIN_SRC 
+redis-cli  KEYS "prefix:*" | xargs redis-cli  DEL
+#+END_SRC
