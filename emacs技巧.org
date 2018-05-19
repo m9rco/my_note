@@ -18,3 +18,14 @@ M-x yas-new-snippet
 #+BEGIN_EXAMPLE
 C-c C-c
 #+END_EXAMPLE
+
+
+* org mode字体设置
+  #+BEGIN_SRC 
+  (defun self-font()
+  (interactive)
+  (set-frame-font (format "%s:pixelsize=%d" "Monaco" 12) t)
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+                      (font-spec :family "Hiragino Sans GB W3" :size 14))))
+  #+END_SRC
