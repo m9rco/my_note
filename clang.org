@@ -1,0 +1,7 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+* clang-format风格配置
+  #+BEGIN_SRC 
+  "{BasedOnStyle: llvm, IndentWidth: 8, ColumnLimit: 99}"
+  #+END_SRC

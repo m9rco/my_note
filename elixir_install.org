@@ -1,32 +1,35 @@
 #+OPTIONS: ^:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
 
-* pre-install
-  #+BEGIN_SRC 
-  centos: yum install ncurses-devel openssl-devel
-  ubuntu: apt install ncurses-dev openssl-dev
-  #+END_SRC
+# Install asdf on Ubuntu
+#+BEGIN_SRC 
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
-* install erlang
-  #+BEGIN_SRC 
-  wget "http://erlang.org/download/otp_src_19.3.tar.gz" -O otp19.tar.gz
-  tar xfz otp19.tar.gz
-  cd otp_src_19.3/
-  ./configure --with-ssl
-  make && make install  
-  #+END_SRC
+if bash
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
-* install elixir
-  #+BEGIN_SRC 
-  wget "https://github.com/elixir-lang/elixir/archive/v1.4.4.tar.gz"
-  tar xfz v1.4.4.tar.gz
-  cd elixir-1.4.4/
-  export PATH="${PATH}:/usr/local/bin"
-  make && make install
-  #+END_SRC
+if zsh
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+#+END_SRC
 
-* install deps
-  #+BEGIN_SRC 
-  mix local.hex
-  mix local.rebar  
-  #+END_SRC
+# Install required packages before installing Erlang/Elixir
+#+BEGIN_SRC 
+sudo apt update
+sudo apt install -y build-essential automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev
+#+END_SRC
+
+# Add plugin and install Erlang 20.0
+#+BEGIN_SRC 
+asdf plugin-add erlang
+asdf install erlang 20.0
+asdf global erlang 20.
+#+END_SRC
+
+# Add plugin and install Elixir 1.5.2
+#+BEGIN_SRC 
+asdf plugin-add elixir
+asdf install elixir 1.5.2
+asdf global elixir 1.5.2
+#+END_SRC
