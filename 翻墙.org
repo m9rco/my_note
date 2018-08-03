@@ -1,0 +1,12 @@
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
+
+* shadowsocks-go
+  #+BEGIN_SRC 
+  wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
+  #+END_SRC
+
+* kcptun
+  #+BEGIN_SRC 
+  wget --no-check-certificate https://raw.githubusercontent.com/kuoruan/kcptun_installer/master/kcptun.sh
+  #+END_SRC
