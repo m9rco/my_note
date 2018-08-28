@@ -21,6 +21,8 @@ while true; do
     fi
     #每次循环沉睡2s
     sleep 2
+    # clean up
+    screen -wipe
 done
 
 #+END_SRC

@@ -19,7 +19,7 @@ find ./ -name .svn |xargs rm -rf
 
 ** zsh
 #+BEGIN_SRC 
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /usr/bin/zsh
 #+END_SRC
@@ -99,4 +99,9 @@ firewall-cmd --zone=public --add-port=3306/tcp --permanent  #添加3306端口
 ** redis 匹配删除key
 #+BEGIN_SRC 
 redis-cli  KEYS "prefix:*" | xargs redis-cli  DEL
+#+END_SRC
+
+** 查看本地端口监听
+#+BEGIN_SRC 
+lsof -iTCP -sTCP:LISTEN -n -P
 #+END_SRC
