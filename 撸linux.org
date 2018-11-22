@@ -1,4 +1,4 @@
-#+OPTIONS: ^:nil
+~#+OPTIONS: ^:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://gongzhitaao.org/orgcss/org.css" />
 *  常用Linux操作
 ** 按ID删除文件
