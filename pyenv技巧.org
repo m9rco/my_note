@@ -5,8 +5,8 @@
 * pyenv技巧
 ** 安装pyenv和虚拟环境插件
 #+BEGIN_SRC 
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+git clone --depth=1 https://github.com/yyuu/pyenv.git ~/.pyenv
+git clone --depth=1 https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 #+END_SRC
 
 
